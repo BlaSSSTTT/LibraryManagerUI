@@ -1,0 +1,23 @@
+<div class="background">
+  <div class="modal">
+    
+    <div class="line"></div>
+    <div class="section">
+      <div class="section title">
+        <span class="section-title">Title Of Book</span>
+        <input class="black-text" type="text" [(ngModel)]="book.title" placeholder="Enter title">
+      </div>
+      <div class="section author">
+        <span class="section-value section-title">Author</span>
+        <input class="black-text" type="text" [(ngModel)]="book.author" placeholder="Enter authot">
+      </div>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="button-group">
+      <button class="cancel-button" (click)="closeModal.emit()">Cancel</button>
+      <button class="save-button" (click)="onSave()">Save</button>
+    </div>
+  </div>
+</div>

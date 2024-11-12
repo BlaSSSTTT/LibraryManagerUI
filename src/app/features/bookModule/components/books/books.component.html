@@ -1,0 +1,12 @@
+<div class="body">
+  <h2>Available Books</h2>
+  <div class="line"></div>
+  <button (click)="openModal()">Add Book</button>
+
+  <div class="appointments" *ngFor="let book of books">
+      <p class="title black-text">{{ book.title }}</p>
+      <p class="date black-text">{{ book.author }}</p>
+  </div>
+  
+  <app-books-modal *ngIf="isModalOpen" (close)="closeModal()" (saveBook)="onSaveBook($event)"></app-books-modal>
+</div>
